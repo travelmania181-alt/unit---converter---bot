@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Measure + IBPS Solver</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Measure & IBPS Solver</h1>
+      <p class="hint">Converter + AI-powered IBPS-level solver (Gemini backend)</p>
+    </header>
+
+    <section class="card converter">
+      <h2>Quick Converter</h2>
+      <div class="row">
+        <input id="val" type="number" placeholder="Value" />
+        <select id="from">
+          <optgroup label="Length">
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+            <option value="km">km</option>
+          </optgroup>
+          <optgroup label="Mass">
+            <option value="kg">kg</option>
+            <option value="lb">lb</option>
+          </optgroup>
+          <optgroup label="Temp">
+            <option value="c">°C</option>
+            <option value="f">°F</option>
+          </optgroup>
+        </select>
+        <span class="arrow">→</span>
+        <select id="to">
+          <optgroup label="Length">
+            <option value="m">m</option>
+            <option value="cm">cm</option>
+            <option value="km">km</option>
+          </optgroup>
+          <optgroup label="Mass">
+            <option value="kg">kg</option>
+            <option value="lb">lb</option>
+          </optgroup>
+          <optgroup label="Temp">
+            <option value="c">°C</option>
+            <option value="f">°F</option>
+          </optgroup>
+        </select>
+        <button id="convBtn">Convert</button>
+      </div>
+      <div id="convResult" class="result">Result will appear here</div>
+    </section>
+
+    <section class="card chat">
+      <h2>AI Chat (Ask quant/reasoning)</h2>
+      <div id="messages" class="messages" role="log" aria-live="polite"></div>
+
+      <div class="inputRow">
+        <input id="userInput" placeholder="Type a question (e.g. 'Train 120m passes platform 80m in 10s. speed?')" />
+        <button id="sendBtn">Send</button>
+      </div>
+
+      <p class="note">Tip: For conversions use the converter above, or ask the chat to "Convert 5 km to m".</p>
+    </section>
+    <footer>Made by you • Gemini key stored securely on Vercel</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
