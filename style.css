@@ -1,0 +1,21 @@
+:root{--bg:#f5f7fb;--card:#ffffff;--accent:#2b6cb0;--muted:#6b7280}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#111}
+.container{max-width:820px;margin:18px auto;padding:12px}
+header h1{margin:0;font-size:1.4rem}
+.hint{margin:6px 0 14px 0;color:var(--muted)}
+.card{background:var(--card);border-radius:10px;padding:14px;margin-bottom:12px;box-shadow:0 6px 20px rgba(11, 22, 39, 0.04)}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+input[type=number], input[type=text], select{padding:8px;border:1px solid #e6e9ef;border-radius:8px;min-width:120px}
+.arrow{font-weight:700}
+.result{margin-top:10px;padding:10px;border-radius:8px;background:#f8fafc;color:#0f172a}
+.messages{min-height:220px;max-height:48vh;padding:8px;overflow:auto;border:1px solid #eef2f6;border-radius:8px;background:#fff}
+.inputRow{display:flex;gap:8px;margin-top:8px}
+.inputRow input{flex:1;padding:10px}
+.inputRow button, #convBtn{background:var(--accent);color:#fff;border:none;padding:9px 12px;border-radius:8px;cursor:pointer}
+.inputRow button:active, #convBtn:active{transform:translateY(1px)}
+.message{padding:8px;margin:6px 0;border-radius:8px;white-space:pre-wrap}
+.user{background:#e6f4ff;text-align:right}
+.bot{background:#f3f4f6;text-align:left}
+.note{font-size:0.85rem;color:var(--muted);margin-top:8px}
+footer{font-size:0.8rem;color:var(--muted);text-align:center;margin-top:10px}
